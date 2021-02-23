@@ -29,3 +29,11 @@ $('.specification__slider').slick({
   prevArrow: $('.specification-button-prev'),
   nextArrow: $('.specification-button-next'),
 })
+
+//reviews slider
+$('.reviews__slider').slick({
+  dots: false,
+  useCSS: false,
+  prevArrow: $('.review-button-prev'),
+  nextArrow: $('.review-button-next'),
+})
