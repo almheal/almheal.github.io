@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link
+      rel="shortcut icon"
+      href="/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <title>Have A Rest</title>
+  </head>
+  <body>
+    <svg display="none">
+  <symbol id="instagram" viewBox="0 0 300 300">
+    <path
+      d="M38.52,0.012h222.978C282.682,0.012,300,17.336,300,38.52v222.978c0,21.178-17.318,38.49-38.502,38.49   H38.52c-21.184,0-38.52-17.313-38.52-38.49V38.52C0,17.336,17.336,0.012,38.52,0.012z M218.546,33.329   c-7.438,0-13.505,6.091-13.505,13.525v32.314c0,7.437,6.067,13.514,13.505,13.514h33.903c7.426,0,13.506-6.077,13.506-13.514   V46.854c0-7.434-6.08-13.525-13.506-13.525H218.546z M266.084,126.868h-26.396c2.503,8.175,3.86,16.796,3.86,25.759   c0,49.882-41.766,90.34-93.266,90.34c-51.487,0-93.254-40.458-93.254-90.34c0-8.963,1.37-17.584,3.861-25.759H33.35v126.732   c0,6.563,5.359,11.902,11.916,11.902h208.907c6.563,0,11.911-5.339,11.911-11.902V126.868z M150.283,90.978   c-33.26,0-60.24,26.128-60.24,58.388c0,32.227,26.98,58.375,60.24,58.375c33.278,0,60.259-26.148,60.259-58.375   C210.542,117.105,183.561,90.978,150.283,90.978z"
+    />
+  </symbol>
+
+  <symbol id="facebook" viewBox="0 0 512 512">
+    <path
+      d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"
+    />
+  </symbol>
+
+  <symbol id="pinterest" viewBox="-62 0 512 512">
+    <path
+      d="m60.945312 278.21875c.640626-1.597656 7.050782-26.230469 7.5-27.898438-10.007812-15.058593-21.125-64.371093-12.597656-104.398437 9.199219-58.730469 71.4375-87.601563 130.199219-87.601563v-.109374c73.570313.046874 128.640625 40.980468 128.699219 111.476562.046875 55.179688-33.195313 128.117188-89.957032 128.117188-.015624 0-.027343 0-.042968 0-20.257813 0-45.90625-9.1875-52.632813-18.210938-7.761719-10.398438-9.667969-23.230469-5.566406-36.941406 10.050781-32.082032 22.867187-70.511719 24.363281-96.136719 1.386719-24.183594-15.773437-39.917969-38.027344-39.917969-16.746093 0-38.496093 9.726563-49.335937 37.058594-8.953125 22.707031-8.761719 46.480469.585937 72.671875 3.644532 10.238281-16.15625 76.984375-22.5 98.71875-15.761718 53.992187-37.339843 122.304687-32.726562 160.347656l4.453125 36.605469 22.367187-29.3125c30.953126-40.519531 62.957032-145.332031 71.484376-170.835938 25.210937 32.648438 77.710937 33.585938 83.832031 33.585938 75.183593 0 160.4375-74.65625 158.019531-178.5625-2.121094-91.121094-68.808594-166.875-188.632812-166.875v.117188c-113.976563 0-180.5 60.835937-196.785157 137.703124-14.914062 71.273438 18.253907 125.519532 57.300781 140.398438zm0 0"
+    />
+  </symbol>
+
+  <symbol id="arrow-down" viewBox="0 0 444.819 444.819">
+    <path
+      d="M434.252,114.203l-21.409-21.416c-7.419-7.04-16.084-10.561-25.975-10.561c-10.095,0-18.657,3.521-25.7,10.561
+		L222.41,231.549L83.653,92.791c-7.042-7.04-15.606-10.561-25.697-10.561c-9.896,0-18.559,3.521-25.979,10.561l-21.128,21.416
+		C3.615,121.436,0,130.099,0,140.188c0,10.277,3.619,18.842,10.848,25.693l185.864,185.865c6.855,7.23,15.416,10.848,25.697,10.848
+		c10.088,0,18.75-3.617,25.977-10.848l185.865-185.865c7.043-7.044,10.567-15.608,10.567-25.693
+		C444.819,130.287,441.295,121.629,434.252,114.203z"
+    />
+  </symbol>
+
+  <symbol id="arrow-left" viewBox="0 0 256 256">
+    <polygon
+      points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128 		"
+    />
+  </symbol>
+
+  <symbol id="arrow-right" viewBox="0 0 256 256">
+    <polygon
+      points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128 		"
+    />
+  </symbol>
+</svg>
+
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+
+
+
+      <div class="header-left">
+        <div class="header__row-select">
+          <div class="header__select">
+            <span class="header__select-name">
+              Ваша страна
+              <svg class="select__arrow">
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="header__select">
+            <span class="header__select-name">
+              RU
+              <svg class="select__arrow">
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="header__select">
+            <img class="messanger" src="../img/header/messanger.svg" alt="messanger">
+          </div>
+        </div>
+        <a class="number" href="tel:380661164001">+38 066 116 40 01</a>
+      </div>
+
+
+      <a class="logo" href="#">
+        <img class="logo__img" src="../img/logo.svg" alt="logo">
+      </a>
+
+
+
+      <div class="header-right">
+        <div class="social__row">
+          <a href="#" class="social__item">
+            <svg class="social__icon">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__item">
+            <svg class="social__icon">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__item">
+            <svg class="social__icon">
+              <use xlink:href="#pinterest"></use>
+            </svg>
+          </a>
+        </div>
+        <img class="suitcase" src="../img/header/suitcase.svg" alt="suitcase">
+        <button class="burger__menu"></button>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <div class="intro__inner">
+            <div class="intro__slider">
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/1.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/2.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/3.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/4.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/5.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/6.jpg"
+                  alt="slide"
+                />
+              </div>
+              <div class="intro__slider-item">
+                <img
+                  class="intro__img"
+                  src="#"
+                  data-lazy="./img/intro/7.jpg"
+                  alt="slide"
+                />
+              </div>
+            </div>
+            <div class="slider__icons">
+              <div class="slider__btn intro-button-prev">
+                <svg class="slider-arrow">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              <div class="slider__btn intro-button-next">
+                <svg class="slider-arrow">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="container">
+          <div class="feature__inner">
+            <div class="feature__body">
+              <div class="feature__column">
+                <div class="feature__picture">
+                  <img
+                    class="feature__img"
+                    src="./img/feature/1.jpg"
+                    alt="feature"
+                  />
+                </div>
+                <div class="column__body">
+                  <h4 class="feature__title">
+                    встроенный usb - порт и power bank
+                  </h4>
+                  <img
+                    class="feature__icon"
+                    src="./img/feature/usb.svg"
+                    alt="usb"
+                  />
+                  <div class="feature__text">
+                    <p>Твой телефон будет всегда заряжен</p>
+                  </div>
+                  <div class="feature__size-for">
+                    <span class="feature__size-text">Для размера</span>
+                    <div class="feature__sizes">
+                      <div class="feature__size">S</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__column">
+                <div class="feature__picture">
+                  <img
+                    class="feature__img"
+                    src="./img/feature/2.jpg"
+                    alt="feature"
+                  />
+                </div>
+                <div class="column__body">
+                  <h4 class="feature__title">встроенные весы</h4>
+                  <img
+                    class="feature__icon"
+                    src="./img/feature/libra.svg"
+                    alt="usb"
+                  />
+                  <div class="feature__text">
+                    <p>Будешь знать вес своего багажа перед вылетом</p>
+                  </div>
+                  <div class="feature__size-for">
+                    <span class="feature__size-text">Для размера</span>
+                    <div class="feature__sizes">
+                      <div class="feature__size">M</div>
+                      <div class="feature__size">L</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products__list">
+        <div class="container">
+          <div class="products__list-inner">
+            <div class="row">
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected red"></div>
+                </div>
+                <div class="product__size">small</div>
+                <div class="product__price">12 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected yellow"></div>
+                  <div class="color__item red"></div>
+                </div>
+                <div class="product__size">medium</div>
+                <div class="product__price">14 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected yellow"></div>
+                  <div class="color__item red"></div>
+                </div>
+                <div class="product__size">large</div>
+                <div class="product__price">16 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="decor__line">
+        <div class="decor__track">
+          <span class="decor__text">new</span>
+          <span class="decor__text">new</span>
+          <span class="decor__text">new</span>
+          <span class="decor__text">new</span>
+          <span class="decor__text">new</span>
+          <span class="decor__text">new</span>
+          <img class="decor__plane" src="./img/plan_icon.png" alt="plan" />
+        </div>
+      </div>
+
+      <section class="products">
+        <div class="container">
+          <div class="products__inner">
+            <div class="row flex-wrap">
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                  <div class="product-update">new organize</div>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected turquoise"></div>
+                  <div class="color__item pink"></div>
+                  <div class="color__item yellow"></div>
+                </div>
+                <div class="product__size">small</div>
+                <div class="product__price">14 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                  <div class="product-update">new organize</div>
+                  <div class="product-update new-scale">new scale</div>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected yellow"></div>
+                  <div class="color__item pink"></div>
+                  <div class="color__item turquoise"></div>
+                </div>
+                <div class="product__size">medium</div>
+                <div class="product__price">16 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+
+              <div class="product__card">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                  <div class="product-update">new organize</div>
+                  <div class="product-update new-scale">new scale</div>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item selected pink"></div>
+                  <div class="color__item yellow"></div>
+                  <div class="color__item turquoise"></div>
+                </div>
+                <div class="product__size">large</div>
+                <div class="product__price">18 000 РУБ</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+
+              <div class="product__card set__product">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                  <div class="sale">-15%</div>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item pink"></div>
+                  <div class="color__item yellow"></div>
+                  <div class="color__item red"></div>
+                  <div class="color__item turquoise">new</div>
+                  <div class="color__item dark-grey">new</div>
+                  <div class="color__item pink">new</div>
+                </div>
+                <div class="set-of-two">set of two</div>
+                <div class="product__size">make a set</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+
+              <div class="product__card set__card">
+                <h5 class="set__card-title">
+                  Создай свой TRAVEL SET под любое путешествие
+                </h5>
+                <div class="line-plan bottom-94"></div>
+                <div class="line-plan"></div>
+              </div>
+
+              <div class="product__card set__product">
+                <div class="product__picture">
+                  <a class="product__link" href="#">
+                    <img
+                      class="product__img"
+                      src="./img/products/1.png"
+                      alt="product"
+                    />
+                  </a>
+                  <div class="sale">-25%</div>
+                </div>
+                <div class="product__colors">
+                  <div class="color__item pink"></div>
+                  <div class="color__item yellow"></div>
+                  <div class="color__item red"></div>
+                  <div class="color__item turquoise">new</div>
+                  <div class="color__item dark-grey">new</div>
+                  <div class="color__item pink">new</div>
+                </div>
+                <div class="set-of-two">set of two</div>
+                <div class="product__size">make a set</div>
+                <a class="button__primary" href="#">Детальнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="accessories">
+        <div class="accessories__inner">
+          <div class="section__title">Аксессуары для вашего путешествия</div>
+          <div class="row">
+            <div class="accessories__column">
+              <h4 class="accessories__title">Защитные чехлы</h4>
+              <img
+                class="accessories__img"
+                src="./img/accessories/1.png"
+                alt="accessory"
+              />
+            </div>
+            <div class="accessories__column">
+              <h4 class="accessories__title">Органайзеры</h4>
+              <img
+                class="accessories__img"
+                src="./img/accessories/2.png"
+                alt="accessory"
+              />
+            </div>
+            <div class="accessories__column">
+              <h4 class="accessories__title">Power Bank</h4>
+              <img
+                class="accessories__img"
+                src="./img/accessories/3.png"
+                alt="accessory"
+              />
+            </div>
+            <div class="accessories__column">
+              <h4 class="accessories__title">Наклейки и открытки</h4>
+              <img
+                class="accessories__img"
+                src="./img/accessories/4.png"
+                alt="accessory"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sizes">
+        <div class="sizes__inner">
+          <div class="layout-first"></div>
+          <div class="layout-second"></div>
+          <div class="layout-three"></div>
+          <div class="layout-four"></div>
+          <div class="slider__icons">
+            <div class="slider__btn sizes-button-prev">
+              <svg class="slider-arrow">
+                <use xlink:href="#arrow-left"></use>
+              </svg>
+            </div>
+            <div class="slider__btn sizes-button-next">
+              <svg class="slider-arrow">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="sizes__slider">
+            <div class="sizes__item">
+              <div class="sizes__content-wrapper">
+                <div class="sizes__content-left">
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/day-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для поездок на 2-3 дня</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/usb-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">
+                        Встроенный USB-порт и Power Bank
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="sizes__img"
+                    src="./img/sizes/sizes-product.png"
+                    alt="product"
+                  />
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/smena-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для 4-7 нарядов</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/hand-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Ручная кладь</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sizes__content-right">
+                  <h3 class="sizes__title">Small</h3>
+                  <h4 class="sizes__subtitle">
+                    Для путешествий на выходные<br />
+                    или бизнес-командировок
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="sizes__item">
+              <div class="sizes__content-wrapper">
+                <div class="sizes__content-left">
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/day-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для поездок на 2-3 дня</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/usb-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">
+                        Встроенный USB-порт и Power Bank
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="sizes__img"
+                    src="./img/sizes/sizes-product.png"
+                    alt="product"
+                  />
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/smena-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для 4-7 нарядов</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/hand-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Ручная кладь</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sizes__content-right">
+                  <h3 class="sizes__title">Small</h3>
+                  <h4 class="sizes__subtitle">
+                    Для путешествий на выходные<br />
+                    или бизнес-командировок
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="sizes__item">
+              <div class="sizes__content-wrapper">
+                <div class="sizes__content-left">
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/day-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для поездок на 2-3 дня</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/usb-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">
+                        Встроенный USB-порт и Power Bank
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="sizes__img"
+                    src="./img/sizes/sizes-product.png"
+                    alt="product"
+                  />
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/smena-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для 4-7 нарядов</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/hand-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Ручная кладь</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sizes__content-right">
+                  <h3 class="sizes__title">Small</h3>
+                  <h4 class="sizes__subtitle">
+                    Для путешествий на выходные<br />
+                    или бизнес-командировок
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="sizes__item">
+              <div class="sizes__content-wrapper">
+                <div class="sizes__content-left">
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/day-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для поездок на 2-3 дня</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/usb-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">
+                        Встроенный USB-порт и Power Bank
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="sizes__img"
+                    src="./img/sizes/sizes-product.png"
+                    alt="product"
+                  />
+                  <div class="sizes__info-list">
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/smena-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Для 4-7 нарядов</div>
+                    </div>
+                    <div class="sizes__info-item">
+                      <img
+                        class="sizes__info-icon"
+                        src="./img/sizes/hand-info.svg"
+                        alt="day-info"
+                      />
+                      <div class="size__info-text">Ручная кладь</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sizes__content-right">
+                  <h3 class="sizes__title">Small</h3>
+                  <h4 class="sizes__subtitle">
+                    Для путешествий на выходные<br />
+                    или бизнес-командировок
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="terminal">Terminal 1</div>
+        </div>
+      </section>
+
+      <section class="specification">
+          <div class="specification__inner">
+            <div class="container">
+              <h3 class="section__title">Основные характеристики</h3>
+            </div>
+            <div class="specification__body">
+              <div class="specification-left">
+                <img
+                  class="specification__suitcase"
+                  src="./img/specification/suitcase.svg"
+                  alt="suitcase"
+                />
+              </div>
+              <div class="specification__column">
+                <div class="specification__btn-wrapper">
+                  <div class="slider__btn specification-button-prev">
+                    <svg class="slider-arrow">
+                      <use xlink:href="#arrow-left"></use>
+                    </svg>
+                  </div>
+                </div>
+                  <div class="specification__btn-wrapper">
+                    <div class="slider__btn specification-button-next">
+                      <svg class="slider-arrow">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                <div class="specification__slider">
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-1.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">1</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-1.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Встроенный USB-порт и Power bank в комплекте
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Оставайтесь всегда на связи благодаря USB-порту и
+                            Power bank в чемоданах размера S (ручная кладь).
+                          </p>
+                        </div>
+                        <ul class="specification__list">
+                          <li class="specification__list-item">
+                            Специальный карман для размещения Power bank;
+                          </li>
+                          <li class="specification__list-item">
+                            Мощность 4 000 mAh (1-2 полных заряда гаджета);
+                          </li>
+                          <li class="specification__list-item">
+                            2 часа до полного заряда Power bank.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-2.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">2</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-2.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Встроенные весы
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Вы можете узнать вес вашего чемодана еще до прибытия в аэропорт и не переплачивать за перевес:
+                          </p>
+                        </div>
+                        <ul class="specification__list">
+                          <li class="specification__list-item">
+                            весы встроены в боковую ручку чемодана и работают от батарейки;
+                          </li>
+                          <li class="specification__list-item">
+                            функция подсветки дисплея и автоотключения;
+                          </li>
+                          <li class="specification__list-item">
+                            четыре единицы измерения веса.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-3.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">3</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-3.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Надежный корпус
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Чемодан изготовлен из прочного поликарбоната — легкого, но ударопрочного и долговечного материала, который  зарекомендовал себя на рынке багажа исключительно с положительных сторон.
+                          </p>
+                          <p>
+                            Этот материал не подвержен растрескиванию, а специальное шероховатое покрытие делает его менее склонным к царапинам.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-4.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">4</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-4.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Прочные комплектующие
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Чемоданы оснащены четырьмя двойными маневренными колесами из нейлона с поворотом на 360’, которые позволяют катить чемодан так, как удобно вам.
+                          </p>
+                          <p>
+                            Телескопическая ручка из алюминия фиксируется в нескольких положениях, что особо удобно для любого роста и возраста.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-5.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">5</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-5.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Встроеный кодовый замок<br/> с функцией TSA
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Защитит ваш багаж от несанкционированного вскрытия и позволит работникам аэропорта провести досмотр чемодана без взлома замка, как бывает в случае с обычными кодовыми замками.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-6.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">6</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-6.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Организация внутреннего пространства
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Внутри чемодана есть два просторных отделения с перегородкой, эластичные ремни и карман с застежкой на молнии, которые позволят вам с удобством разместить все необходимые для путешествия вещи.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="specification__item">
+                    <img class="specification-img" src="./img/specification/img-7.jpg" alt="specification">
+                    <div class="specification__item-body">
+                      <div class="specification__header">
+                        <div class="specification__number">7</div>
+                        <div class="specification__icon-wrapper">
+                          <img
+                            class="specification-icon"
+                            src="./img/specification/icon-7.svg"
+                            alt="specification"
+                          />
+                        </div>
+                        <h5 class="specification__title">
+                          Внешний карман
+                        </h5>
+                      </div>
+                      <div class="specification__content">
+                        <div class="specification__text">
+                          <p>
+                            Функциональный внешний карман в чемоданах размера S<br/>(ручная кладь) позволит комфортно разместить необходимые документы, посадочный талон или мобильное устройство.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swipe__icon">
+              <img class="swipe__hand" src="./img/specification/swipe.svg" alt="swipe" >
+            </div>
+          </div>
+      </section>
+
+      <section class="garant">
+        <div class="container">
+          <div class="garant__inner">
+            <div class="garant__column">
+              <div class="garant-icon">
+                <img class="garant-suitcase" src="./img/guarantee/suitcase.svg" alt="suitcase" >
+                <img class="decor-arrow" src="./img/guarantee/decor-arrow.svg" alt="arrow">
+                <img class="decor-arrow" src="./img/guarantee/decor-arrow.svg" alt="arrow">
+              </div>
+            </div>
+            <div class="garant__column">
+              <div class="garant__content">
+                <h4 class="garant__title">Официальная гарантия на чемодан — <br /><span>365 дней</span></h4>
+                <div class="garant__text">
+                  <p>Если чемодан сломался, мы обменяем его
+                    на новый или вернем деньги</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="decor__line pink">
+        <div class="decor__track">
+          <span class="decor__line-text">WILL YOU TRAVEL ME ?</span>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
