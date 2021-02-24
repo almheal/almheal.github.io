@@ -569,6 +569,10 @@ a {
       flex-wrap: wrap;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 .intro {
   padding: 85px 0 40px;
 }

@@ -108,9 +108,13 @@ $('.accessories__slider').slick({
 })
 
 const button = document.querySelector('.burger__menu')
-const modal = document.querySelector('.menu__modal')
 
-button.addEventListener('click', () => {
+button.addEventListener('click', openModalMenu)
+
+function openModalMenu() {
+  const modal = document.querySelector('.menu__modal')
+  const body = document.querySelector('body')
+  body.classList.toggle('overflow')
   modal.classList.toggle('show')
-  button.classList.toggle('active')
-})
+  this.classList.toggle('active')
+}
