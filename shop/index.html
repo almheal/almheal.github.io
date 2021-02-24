@@ -84,15 +84,18 @@
               </svg>
             </span>
           </div>
-          <div class="header__select">
-            <img
-              class="messanger"
-              src="./img/header/messanger.svg"
-              alt="messanger"
-            />
-          </div>
         </div>
-        <a class="number" href="tel:380661164001">+38 066 116 40 01</a>
+        <div class="header__select">
+          <img
+            class="messanger"
+            src="./img/header/messanger.svg"
+            alt="messanger"
+          />
+        </div>
+        <a class="number" href="tel:380661164001">
+          <span class="number__item">+38 066 116 40 01</span>
+          <img class="number__icon" src="./img/header/telephone_icon.svg" alt="number" >
+        </a>
       </div>
 
       <a class="logo" href="#">
@@ -130,60 +133,25 @@
           <div class="intro__inner">
             <div class="intro__slider">
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/1.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-1"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/2.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-2"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/3.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-3"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/4.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-4"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/5.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-5"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/6.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-6"></div>
               </div>
               <div class="intro__slider-item">
-                <img
-                  class="intro__img"
-                  src="#"
-                  data-lazy="./img/intro/7.jpg"
-                  alt="slide"
-                />
+                <div class="intro__picture intro__picture-7"></div>
               </div>
             </div>
             <div class="slider__icons">
@@ -269,7 +237,7 @@
       <section class="products__list">
         <div class="container">
           <div class="products__list-inner">
-            <div class="row">
+            <div class="row flex-wrap">
               <div class="product__card">
                 <div class="product__picture">
                   <a class="product__link" href="#">
@@ -472,39 +440,64 @@
       <section class="accessories">
         <div class="accessories__inner">
           <div class="section__title">Аксессуары для вашего путешествия</div>
-          <div class="row">
+          <div class="accessories__slider">
             <div class="accessories__column">
-              <h4 class="accessories__title">Защитные чехлы</h4>
-              <img
-                class="accessories__img"
-                src="./img/accessories/1.png"
-                alt="accessory"
-              />
+              <div class="accessories__content">
+                <h4 class="accessories__title">Защитные чехлы</h4>
+                <img
+                  class="accessories__img"
+                  src="./img/accessories/1.png"
+                  alt="accessory"
+                />
+              </div>
             </div>
             <div class="accessories__column">
-              <h4 class="accessories__title">Органайзеры</h4>
-              <img
-                class="accessories__img"
-                src="./img/accessories/2.png"
-                alt="accessory"
-              />
+              <div class="accessories__content background-light-grey">
+                <h4 class="accessories__title color-dark">Органайзеры</h4>
+                <img
+                  class="accessories__img"
+                  src="./img/accessories/2.png"
+                  alt="accessory"
+                />
+              </div>
             </div>
             <div class="accessories__column">
-              <h4 class="accessories__title">Power Bank</h4>
-              <img
-                class="accessories__img"
-                src="./img/accessories/3.png"
-                alt="accessory"
-              />
+              <div class="accessories__content background-yellow">
+                <h4 class="accessories__title color-dark">Power Bank</h4>
+                <img
+                  class="accessories__img"
+                  src="./img/accessories/3.png"
+                  alt="accessory"
+                />
+              </div>
             </div>
             <div class="accessories__column">
-              <h4 class="accessories__title">Наклейки и открытки</h4>
-              <img
-                class="accessories__img"
-                src="./img/accessories/4.png"
-                alt="accessory"
-              />
+              <div class="accessories__content background-red">
+                <h4 class="accessories__title">Наклейки и открытки</h4>
+                <img
+                  class="accessories__img"
+                  src="./img/accessories/4.png"
+                  alt="accessory"
+                />
+              </div>
             </div>
+            <div class="accessories__column">
+              <div class="accessories__content background-light-dark">
+                <h4 class="accessories__title">Уход за чемоданом</h4>
+                <img
+                  class="accessories__img"
+                  src="./img/accessories/5.png"
+                  alt="accessory"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swipe__icon">
+            <img
+              class="swipe__hand"
+              src="./img/specification/swipe.svg"
+              alt="swipe"
+            />
           </div>
         </div>
       </section>
@@ -1095,8 +1088,6 @@
           <span class="decor__line-text">WILL YOU TRAVEL ME ?</span>
         </div>
       </div>
-
-
 
       <section class="reviews">
         <div class="container">
