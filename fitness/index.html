@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>ShapeUp</title>
+	<link href="style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+
+	<!--SVG--------->
+	<svg display="none">
+		<symbol id="arrow-left" viewBox="0 0 256 256">
+			<polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="arrow-right" viewBox="0 0 256 256">
+			<polygon points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="facebook" viewBox="0 0 512 512">
+			<path d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="instagram" viewBox="0 0 300 300">
+			<path d="M38.52,0.012h222.978C282.682,0.012,300,17.336,300,38.52v222.978c0,21.178-17.318,38.49-38.502,38.49   H38.52c-21.184,0-38.52-17.313-38.52-38.49V38.52C0,17.336,17.336,0.012,38.52,0.012z M218.546,33.329   c-7.438,0-13.505,6.091-13.505,13.525v32.314c0,7.437,6.067,13.514,13.505,13.514h33.903c7.426,0,13.506-6.077,13.506-13.514   V46.854c0-7.434-6.08-13.525-13.506-13.525H218.546z M266.084,126.868h-26.396c2.503,8.175,3.86,16.796,3.86,25.759   c0,49.882-41.766,90.34-93.266,90.34c-51.487,0-93.254-40.458-93.254-90.34c0-8.963,1.37-17.584,3.861-25.759H33.35v126.732   c0,6.563,5.359,11.902,11.916,11.902h208.907c6.563,0,11.911-5.339,11.911-11.902V126.868z M150.283,90.978   c-33.26,0-60.24,26.128-60.24,58.388c0,32.227,26.98,58.375,60.24,58.375c33.278,0,60.259-26.148,60.259-58.375   C210.542,117.105,183.561,90.978,150.283,90.978z"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="network" viewBox="0 0 24 24">
+			<path d="m20.497 1.505c-3.328-.121-5.576 1.787-6.762 5.694.61-.273 1.203-.395 1.777-.395 1.219 0 1.758.697 1.614 2.082-.072.839-.608 2.059-1.612 3.664-1.009 1.605-1.763 2.409-2.265 2.409-1.522 0-2.437-7.284-2.747-9.273-.431-2.765-1.58-4.058-3.447-3.877-1.714.163-4.705 3.249-7.055 5.341l1.129 1.472c1.075-.762 1.702-1.144 1.881-1.144 1.871 0 2.777 6.367 4.23 11.102.975 2.613 2.144 3.92 3.553 3.92 2.264 0 5.022-2.144 8.29-6.434 3.155-4.107 4.789-7.344 4.894-9.705l.013-.01c.134-3.165-1.021-4.785-3.493-4.846z"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="twitter" viewBox="0 0 512 512">
+			<path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z"/>
+		</symbol>
+	</svg>
+
+	<svg display="none">
+		<symbol id="youtube" viewBox="0 0 512 512">
+			<path d="M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80
+			c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904
+			C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728
+			c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816
+			c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096
+			C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z"/>
+		</symbol>
+	</svg>
+
+
+	<header class="header" id="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="logo">
+					<img class="logo__icon" src="img/header/logo.png" alt="logo">
+					<h2 class="logo__title">Shape<span>Up</span></h2>
+				</div>
+
+				<ul class="nav" id="nav">
+					<li>
+						<a class="nav__link" href="#" data-scroll="#intro">Home</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#about">About</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#trainers">Trainers</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#service">Service</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#reviews">Reviews</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#price">Price</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+					</li>
+					<li>
+						<a class="nav__link" href="#" data-scroll="#contact">Contact</a>
+					</li>
+				</ul>
+				<div class="burger__menu" id="burger-menu">
+					<span class="burger__menu__line"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="intro" id="intro">
+		<div class="container">
+			<div class="intro__inner">
+				<h1 class="intro__title">build <span class="c-white">your body</span> transform <span class="c-white">your life</span></h1>
+				<div class="intro__text">
+					<p>Curabitur ac volutpat odio. Nunc eget eros viverra, laoreet ligula eget, interdum augue. Pellentesque ornare mauris a hendrerit imperdiet.</p>
+				</div>
+				<div class="intro__btns">
+					<a class="btn" href="#">Get Started</a>
+					<a class="btn" href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="container">
+			<div class="about__inner">
+				<div class="about__column">
+					<h3 class="about__column__suptitle">About ShapeUp</h3>
+					<h2 class="about__column__title">welcome to healthy life</h2>
+					<div class="about__column__text text-size">
+						<p>Nunc euismod ante at purus elementum porttitor. Ut nisi nisl, auctor et imperdiet quis risus.</p>
+					</div>
+					<div class="about__column__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas est porttitor, malesuada tellus aliquet, vehicula ipsum. Suspendisse porttitor sed dolor ac vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi iaculis tellus vestibulum est accumsan commodo. Curabitur sollicitudin, eros vitae vulputate euismod, nibh tortor accumsan tellus, fringilla hendrerit ligula eros nec velit.</p>
+					</div>
+					<a class="btn__more" href="#">Learn More</a>
+				</div>
+
+				<div class="about__column">
+					<div class="about__column__video__main">
+						<img class="about__column__video__img main-video" src="img/about/1.jpg" alt="video">
+					</div>
+					<div class="about__column__video">
+						<img class="about__column__video__img" src="img/about/2.jpg" alt="video">
+					</div>
+					<div class="about__column__video">
+						<img class="about__column__video__img" src="img/about/3.jpg" alt="video">
+					</div>
+					<div class="about__column__video active">
+						<img class="about__column__video__img" src="img/about/1.jpg" alt="video">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="trainers" id="trainers">
+		<div class="container">
+			<div class="trainers__inner">
+				<div class="section__header">
+					<h3 class="section__suptitle">Meet</h3>
+					<h2 class="section__title">our trainers</h2>
+				</div>
+				<div class="trainers__row">
+					<div class="trainers__column">
+						<div class="trainers__column__picture">
+							<img class="trainers__column__img" src="img/trainers/1.jpg" alt="trainer">
+						</div>
+						<div class="trainers__column__title">
+							<h3 class="trainers__name">Letty Adams</h3>
+							<h4 class="trainers__position">Fitness Trainer</h4>
+						</div>
+					</div>
+
+					<div class="trainers__column">
+						<div class="trainers__column__picture">
+							<img class="trainers__column__img" src="img/trainers/2.jpg" alt="trainer">
+						</div>
+						<div class="trainers__column__title">
+							<h3 class="trainers__name">Letty Adams</h3>
+							<h4 class="trainers__position">Fitness Trainer</h4>
+						</div>
+					</div>
+
+					<div class="trainers__column">
+						<div class="trainers__column__picture">
+							<img class="trainers__column__img" src="img/trainers/3.jpg" alt="trainer">
+						</div>
+						<div class="trainers__column__title">
+							<h3 class="trainers__name">Letty Adams</h3>
+							<h4 class="trainers__position">Fitness Trainer</h4>
+						</div>
+					</div>
+
+					<div class="trainers__column">
+						<div class="trainers__column__picture">
+							<img class="trainers__column__img" src="img/trainers/4.jpg" alt="trainer">
+						</div>
+						<div class="trainers__column__title">
+							<h3 class="trainers__name">Letty Adams</h3>
+							<h4 class="trainers__position">Fitness Trainer</h4>
+						</div>
+					</div>
+
+					<div class="trainers__column">
+						<div class="trainers__column__picture">
+							<img class="trainers__column__img" src="img/trainers/5.jpg" alt="trainer">
+						</div>
+						<div class="trainers__column__title">
+							<h3 class="trainers__name">Letty Adams</h3>
+							<h4 class="trainers__position">Fitness Trainer</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="programs" id="service">
+		<div class="container">
+			<div class="programs__inner">
+				<div class="section__header">
+					<h3 class="section__suptitle">Choose</h3>
+					<h2 class="section__title">our programs</h2>
+				</div>
+				<div class="programs__row">
+					<div class="programs__column">
+						<div class="programs__column__wrapper__icon">
+							<img class="programs__column__icon" src="img/programs/icon_1.svg" alt="icon">
+						</div>
+						<h3 class="programs__column__title">Body Building Programs</h3>
+						<div class="programs__column__text">
+							<p>Sed augue enim, lacinia non dui ut, mollis vulputate felis. Vivamus consequat bibendum ullamcorper. Donec sed nibh aliquet odio efficitur sagittis.</p>
+						</div>
+						<a class="btn__more" href="#">Learn More</a>
+					</div>
+
+					<div class="programs__column">
+						<div class="programs__column__wrapper__icon">
+							<img class="programs__column__icon" src="img/programs/icon_2.svg" alt="icon">
+						</div>
+						<h3 class="programs__column__title">Weight Loose Programs</h3>
+						<div class="programs__column__text">
+							<p>Sed augue enim, lacinia non dui ut, mollis vulputate felis. Vivamus consequat bibendum ullamcorper. Donec sed nibh aliquet odio efficitur sagittis.</p>
+						</div>
+						<a class="btn__more" href="#">Learn More</a>
+					</div>
+
+					<div class="programs__column">
+						<div class="programs__column__wrapper__icon">
+							<img class="programs__column__icon" src="img/programs/icon_3.svg" alt="icon">
+						</div>
+						<h3 class="programs__column__title">Spa Programs</h3>
+						<div class="programs__column__text">
+							<p>Sed augue enim, lacinia non dui ut, mollis vulputate felis. Vivamus consequat bibendum ullamcorper. Donec sed nibh aliquet odio efficitur sagittis.</p>
+						</div>
+						<a class="btn__more" href="#">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="reviews" id="reviews">
+		<div class="container">
+			<div class="reviews__inner">
+				<div class="section__header">
+					<h3 class="section__suptitle">Reviews</h3>
+					<h2 class="section__title">what our clients say</h2>
+				</div>
+				<div class="reviews__slider">
+					<div class="reviews__slider__item">
+						<div class="clients__wrapper__img">
+							<img class="clients__img" src="img/reviews/1.png" alt="client">
+						</div>
+						<div class="client__info">
+							<h3 class="client__info__name">Rebecca Morrison</h3>
+							<h4 class="client__info__pos">Social Worker</h4>
+							<div class="client__info__text">
+								<p>Curabitur interdum nulla ligula, ac iaculis est venon. Quisque auctor, ex id posuere aliquam, lorem mauris venenatis sem, eu facilisis magna nibh . Praesent laoreet leo diam, ut suscipit purus malesuada laoreet. Aliquam erat volutpat.</p>
+							</div>
+							<div class="reviews__clients__stars">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+							</div>
+						</div>
+					</div>
+					<div class="reviews__slider__item">
+						<div class="clients__wrapper__img">
+							<img class="clients__img" src="img/reviews/1.png" alt="client">
+						</div>
+						<div class="client__info">
+							<h3 class="client__info__name">Daniel Bllomberg</h3>
+							<h4 class="client__info__pos">Salesman</h4>
+							<div class="client__info__text">
+								<p>Donec nec interdum turpis. Donec faucibus facilisis enim, ut fringilla urna elementum non. Mauris vel mauris ac tellus feugiat maximus. Sed augue enim, lacinia non dui ut, mollis vulputate felis. Vivamus consequat bibendum ullamcorper.</p>
+							</div>
+							<div class="reviews__clients__stars">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star_0.svg">
+							</div>
+						</div>
+					</div>
+					<div class="reviews__slider__item">
+						<div class="clients__wrapper__img">
+							<img class="clients__img" src="img/reviews/1.png" alt="client">
+						</div>
+						<div class="client__info">
+							<h3 class="client__info__name">Rebecca Morrison</h3>
+							<h4 class="client__info__pos">Social Worker</h4>
+							<div class="client__info__text">
+								<p>Curabitur interdum nulla ligula, ac iaculis est venon. Quisque auctor, ex id posuere aliquam, lorem mauris venenatis sem, eu facilisis magna nibh . Praesent laoreet leo diam, ut suscipit purus malesuada laoreet. Aliquam erat volutpat.</p>
+							</div>
+							<div class="reviews__clients__stars">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+								<img class="clients__stars__img" src="img/reviews/star.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<svg class="gallery__arrow__left">
+			<use xlink:href="#arrow-left"></use>
+		</svg>
+		<div class="gallery__slider">
+			<div class="gallery__slider__item">
+				<img class="gallery__slider__img"src="img/gallery/1.jpg" alt="photo">
+			</div>
+			<div class="gallery__slider__item">
+				<img class="gallery__slider__img"src="img/gallery/2.jpg" alt="photo">
+			</div>
+			<div class="gallery__slider__item">
+				<img class="gallery__slider__img"src="img/gallery/3.jpg" alt="photo">
+			</div>
+			<div class="gallery__slider__item">
+				<img class="gallery__slider__img"src="img/gallery/4.jpg" alt="photo">
+			</div>
+			<div class="gallery__slider__item">
+				<img class="gallery__slider__img"src="img/gallery/5.jpg" alt="photo">
+			</div>
+		</div>
+		<svg class="gallery__arrow__right">
+			<use xlink:href="#arrow-right"></use>
+		</svg>
+	</section>
+
+	<section class="pricing" id="price">
+		<div class="container">
+			<div class="pricing__inner">
+				<div class="section__header">
+					<h3 class="section__suptitle">Pricing Table</h3>
+					<h2 class="section__title">our membership plans</h2>
+				</div>
+				<div class="pricing__row">
+					<div class="pricing__column">
+						<div class="pricing__column__wrapper__price">
+							<h3 class="pricing__column__price">10<span>/Day</span></h3>
+						</div>
+						<h4 class="pricing__column__subtitle">One Day Training</h4>
+						<div class="pricing__column__wrapper__info">
+							<ul class="pricing__column__list">
+								<li>One day access to all clubs</li>
+								<li>Training in group</li>
+								<li>No Dedicated trainer</li>
+								<li>Access to one 1 hour fitness class</li>
+								<li>No access to spa center</li>
+								<li>(Book Separately)</li>
+							</ul>
+							<a class="btn__pricing" href="#">Book Now</a>
+						</div>
+					</div>
+
+					<div class="pricing__column">
+						<div class="pricing__column__wrapper__price">
+							<h3 class="pricing__column__price">49<span>/month</span></h3>
+						</div>
+						<h4 class="pricing__column__subtitle">One Year Subscription</h4>
+						<div class="pricing__column__wrapper__info">
+							<ul class="pricing__column__list">
+								<li>Access to all clubs</li>
+								<li>Training in group or alone</li>
+								<li>Dedicated trainer available</li>
+								<li>Access to one 1 hour fitness class</li>
+								<li>Access to spa center</li>
+								<li>(Book Separately)</li>
+							</ul>
+							<a class="btn__pricing" href="#">Book Now</a>
+						</div>
+					</div>
+
+					<div class="pricing__column">
+						<div class="pricing__column__wrapper__price">
+							<h3 class="pricing__column__price">65<span>/month</span></h3>
+						</div>
+						<h4 class="pricing__column__subtitle">One Month Subscription</h4>
+						<div class="pricing__column__wrapper__info">
+							<ul class="pricing__column__list">
+								<li>Access to all clubs</li>
+								<li>Training in group or alone</li>
+								<li>Dedicated trainer available</li>
+								<li>Access to one all fitness class</li>
+								<li>Access to spa center</li>
+								<li>(Book Separately)</li>
+							</ul>
+							<a class="btn__pricing" href="#">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="blog" id="blog">
+		<div class="container">
+			<div class="blog__inner">
+				<div class="section__header">
+					<h3 class="section__suptitle">Blog</h3>
+					<h2 class="section__title">our latest news</h2>
+				</div>
+				<div class="blog__row">
+					<div class="blog__column">
+						<div class="blog__column__wrapper__img">
+							<img class="blog__column__img" src="img/blog/1.jpg" alt="blog">
+						</div>
+						<div class="blog__column__wrapper__info">
+							<h4 class="blog__column__name__theme">Body Fitness</h4>
+							<h2 class="blog__column__title">Start your push-ups today and see results</h2>
+							<div class="blog__column__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ut dui sed facilisis. Aliquam eu nunc orci. Aliquam eleifend in lorem nec mollis.</p>
+							</div>
+							<a class="btn__more" href="#">Continue Reading</a>
+							<div class="author__likes">
+								<div class="author__name"><span>1d</span> Kevin Smith</div>
+								<div class="number__likes">
+									<span>25</span>
+									<img class="likes__icon" src="img/blog/like.svg" alt="like">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog__column">
+						<div class="blog__column__wrapper__img">
+							<img class="blog__column__img" src="img/blog/2.jpg" alt="blog">
+						</div>
+						<div class="blog__column__wrapper__info">
+							<h4 class="blog__column__name__theme">Exersize</h4>
+							<h2 class="blog__column__title">Are you commited enough for better body?</h2>
+							<div class="blog__column__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ut dui sed facilisis. Aliquam eu nunc orci. Aliquam eleifend in lorem nec mollis.</p>
+							</div>
+							<a class="btn__more" href="#">Continue Reading</a>
+							<div class="author__likes">
+								<div class="author__name"><span>2d</span> Md Mizanur Rahman</div>
+								<div class="number__likes">
+									<span>50</span>
+									<img class="likes__icon" src="img/blog/like.svg" alt="like">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog__column">
+						<div class="blog__column__wrapper__img">
+							<img class="blog__column__img" src="img/blog/3.jpg" alt="blog">
+						</div>
+						<div class="blog__column__wrapper__info">
+							<h4 class="blog__column__name__theme">Fitness Club</h4>
+							<h2 class="blog__column__title">Why working out is good for you?</h2>
+							<div class="blog__column__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ut dui sed facilisis. Aliquam eu nunc orci. Aliquam eleifend in lorem nec mollis.</p>
+							</div>
+							<a class="btn__more" href="#">Continue Reading</a>
+							<div class="author__likes">
+								<div class="author__name"><span>2d</span> Nazratun Nayeem</div>
+								<div class="number__likes">
+									<span>71</span>
+									<img class="likes__icon" src="img/blog/like.svg" alt="like">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog__column">
+						<div class="blog__column__wrapper__img">
+							<img class="blog__column__img" src="img/blog/4.jpg" alt="blog">
+						</div>
+						<div class="blog__column__wrapper__info">
+							<h4 class="blog__column__name__theme">Training Equipments</h4>
+							<h2 class="blog__column__title">Liftings things do make a difference</h2>
+							<div class="blog__column__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ut dui sed facilisis. Aliquam eu nunc orci. Aliquam eleifend in lorem nec mollis.</p>
+							</div>
+							<a class="btn__more" href="#">Continue Reading</a>
+							<div class="author__likes">
+								<div class="author__name"><span>3d</span> Marry poppins</div>
+								<div class="number__likes">
+									<span>39</span>
+									<img class="likes__icon" src="img/blog/like.svg" alt="like">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contacts" id="contact">
+		<div class="contacts__top">
+			<div class="container">
+				<div class="contacts__top__inner">
+					<div class="section__header">
+						<h3 class="section__suptitle">Call Us Today</h3>
+						<h2 class="section__title">+1 957 652 1268</h2>
+					</div>
+					<div class="contacts__top__text">
+						<p>Praesent elementum nulla non posuere dictum. Suspendisse aliquet quam diam, egestas tristique nibh tempor sed. Ut justo leo, eleifend sit amet ipsum ac, scelerisque mattis nisl.</p>
+					</div>
+					<a class="btn__pricing" href="#">Book a Program</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="contacts__bottom">
+			<div class="container">
+				<div class="contacts__row">
+					<div class="contacts__column">
+						<div class="logo">
+							<img class="logo__icon" src="img/header/logo.png" alt="logo">
+							<h2 class="logo__title">Shape<span>Up</span></h2>
+						</div>
+						<div class="column__text">
+							<p>Maecenas rhoncus ipsum non nisi finibus maximus. In hac habitasse platea dictumst. Aenean purus eros.</p>
+						</div>
+						<h3 class="contacts__social__title">Follow Us</h3>
+						<div class="contacts__social">
+							<div class="contacts__social__wrapper__icon">
+								<svg class="social__icon">
+									<use xlink:href="#facebook"></use>
+								</svg>
+							</div>
+							<div class="contacts__social__wrapper__icon">
+								<svg class="social__icon">
+									<use xlink:href="#twitter"></use>
+								</svg>
+							</div>
+							<div class="contacts__social__wrapper__icon">
+								<svg class="social__icon">
+									<use xlink:href="#instagram"></use>
+								</svg>
+							</div>
+							<div class="contacts__social__wrapper__icon">
+								<svg class="social__icon">
+									<use xlink:href="#youtube"></use>
+								</svg>
+							</div>
+							<div class="contacts__social__wrapper__icon">
+								<svg class="social__icon">
+									<use xlink:href="#network"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="contacts__column">
+						<h2 class="contacts__column__title">Quick Contacts</h2>
+						<div class="contacts__column__info">
+							<img class="contacts__column__info__img" src="img/contacts/info1.png" alt="icon">
+							<a class="contacts__link" href="#">23,George Washington Street,New York,USA,09567</a>
+						</div>
+						<div class="contacts__column__info">
+							<img class="contacts__column__info__img" src="img/contacts/info3.png" alt="icon">
+							<a class="contacts__link" href="mailto:info@shapeup.com">info@shapeup.com</a>
+						</div>
+						<div class="contacts__column__info">
+							<img class="contacts__column__info__img" src="img/contacts/info4.png" alt="icon">
+							<a class="contacts__link" href="www.shapeup.com">www.shapeup.com</a>
+						</div>
+					</div>
+
+					<div class="contacts__column">
+						<h2 class="contacts__column__title">Popular Search Tags</h2>
+						<div class="contacts__column__tags">
+							<ul class="contacts__column__list">
+								<li class="contacts__column__list__tag">Workout</li>
+								<li class="contacts__column__list__tag">Spa</li>
+								<li class="contacts__column__list__tag">Schedule</li>
+								<li class="contacts__column__list__tag">Weightlifing</li>
+								<li class="contacts__column__list__tag">Boxing</li>
+								<li class="contacts__column__list__tag">Yoga</li>
+								<li class="contacts__column__list__tag">Location</li>
+								<li class="contacts__column__list__tag">Trainers</li>
+								<li class="contacts__column__list__tag">Class</li>
+								<li class="contacts__column__list__tag">Equipments</li>
+								<li class="contacts__column__list__tag">Nutrition</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__top">
+			<ul class="footer__nav">
+				<li>
+					<a class="footer__nav__link" href="#">Home</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">About</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">Trainers</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">Service</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">Reviews</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">Price</a>
+				</li>
+				<li>
+					<a class="footer__nav__link" href="#">Blog</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__bottom">
+			<span>Copyright &copy; 2018. All Rights Reserved</span>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/burger-menu.js"></script>
+	<script src="js/navigation-page.js"></script>
+	<script src="js/about-videos.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/slider-reviews.js"></script>
+</body>
+</html>
