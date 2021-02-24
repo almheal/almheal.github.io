@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Restaurant AGRO</title>
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body id="body">
+    <!--SVG-->
+    <svg display="none">
+      <symbol id="twitter" viewBox="0 0 512 512">
+        <path
+          d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z"
+        />
+      </symbol>
+    </svg>
+
+    <svg display="none">
+      <symbol id="facebook" viewBox="0 0 512 512">
+        <path
+          d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"
+        />
+      </symbol>
+    </svg>
+
+    <svg display="none">
+      <symbol id="linkedin" viewBox="-21 -35 682.66669 682">
+        <path
+          d="m77.613281-.667969c-46.929687 0-77.613281 30.816407-77.613281 71.320313 0 39.609375 29.769531 71.304687 75.8125 71.304687h.890625c47.847656 0 77.625-31.695312 77.625-71.304687-.894531-40.503906-29.777344-71.320313-76.714844-71.320313zm0 0"
+        />
+        <path d="m8.109375 198.3125h137.195313v412.757812h-137.195313zm0 0" />
+        <path
+          d="m482.054688 188.625c-74.011719 0-123.640626 69.546875-123.640626 69.546875v-59.859375h-137.199218v412.757812h137.191406v-230.5c0-12.339843.894531-24.660156 4.519531-33.484374 9.917969-24.640626 32.488281-50.167969 70.390625-50.167969 49.644532 0 69.5 37.851562 69.5 93.339843v220.8125h137.183594v-236.667968c0-126.78125-67.6875-185.777344-157.945312-185.777344zm0 0"
+        />
+      </symbol>
+    </svg>
+
+    <svg display="none">
+      <symbol id="arrow__up" viewBox="0 0 490.544 490.544">
+        <path
+          d="M18.098,274.151L245.213,47.015l227.115,227.136c4.237,4.093,10.99,3.975,15.083-0.262 c3.993-4.134,3.993-10.687,0-14.821L252.744,24.401c-4.165-4.164-10.917-4.164-15.083,0L2.994,259.068 c-4.093,4.237-3.975,10.99,0.262,15.083c4.134,3.992,10.687,3.992,14.82,0H18.098z"
+        />
+        <path
+          d="M252.765,216.38c-4.165-4.164-10.917-4.164-15.083,0L3.016,451.047 c-4.093,4.237-3.976,10.99,0.262,15.083c4.134,3.993,10.687,3.993,14.821,0l227.115-227.115l227.115,227.136 c4.237,4.093,10.99,3.976,15.083-0.261c3.993-4.134,3.993-10.688,0-14.821L252.765,216.38z"
+        />
+        <path
+          d="M479.88,277.266c-2.831,0.005-5.548-1.115-7.552-3.115L245.213,47.015L18.098,274.151 c-4.237,4.093-10.99,3.975-15.083-0.262c-3.992-4.134-3.992-10.687,0-14.82L237.682,24.401c4.165-4.164,10.917-4.164,15.083,0 l234.667,234.667c4.159,4.172,4.148,10.926-0.024,15.085C485.409,276.146,482.702,277.265,479.88,277.266z"
+        />
+        <path
+          d="M479.88,469.266c-2.831,0.005-5.548-1.115-7.552-3.115L245.213,239.015L18.098,466.151 c-4.237,4.093-10.99,3.976-15.083-0.262c-3.993-4.134-3.993-10.687,0-14.821l234.667-234.667c4.165-4.164,10.917-4.164,15.083,0 l234.667,234.667c4.159,4.172,4.148,10.926-0.024,15.085C485.409,468.146,482.702,469.265,479.88,469.266z"
+        />
+      </symbol>
+    </svg>
+
+    <!--HEADER-->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__body">
+            <div class="logo">
+              <a class="logo__link" href="#">
+                <img class="logo__img" src="img/header/logo.webp" alt="logo" />
+              </a>
+              <h3 class="logo__title">agro</h3>
+            </div>
+              <ul class="nav" id="nav">
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#intro">Home</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#about">About</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#services">Pages</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#gallery">Gallery</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#" data-scroll="#footer">Contacts</a>
+                </li>
+              </ul>
+          </div>
+          <div class="header__wrapper__btns">
+            <a class="header__btn" href="project/index.html">get in touch</a>
+            <div class="burger__menu" id="burger">
+              <span class="burger__line"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="scroll__top">
+      <h3 class="scroll__top__name__up">up</h3>
+      <svg class="arrow__up">
+        <use xlink:href="#arrow__up"></use>
+      </svg>
+    </div>
+
+    <!--INTRO-->
+    <div class="intro" id="intro">
+      <div class="container">
+        <h1
+          class="intro__title"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          Organic Food
+        </h1>
+      </div>
+      <div class="container__food">
+        <div class="intro__row">
+          <div
+            class="intro__column"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="intro__column__wrapper__img">
+              <img
+                class="intro__column__img"
+                src="img/intro/1.jpg"
+                alt="sweets"
+              />
+              <h3 class="intro__column__title">awesome <span>sweets</span></h3>
+            </div>
+          </div>
+          <div
+            class="intro__column"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="intro__column__right__list">
+              <div class="intro__top__list__item">
+                <div class="intro__column__top__wrapper">
+                  <img
+                    class="intro__column__img"
+                    src="img/intro/2.jpg"
+                    alt="organic"
+                  />
+                  <h3 class="intro__column__title">
+                    organic <span>food</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="intro__top__list__item">
+                <div class="intro__column__top__wrapper">
+                  <img
+                    class="intro__column__img"
+                    src="img/intro/3.jpg"
+                    alt="meat"
+                  />
+                  <h3 class="intro__column__title">tasty <span>meat</span></h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="intro__column__right__list">
+              <div class="intro__bottom__list__text">
+                <h3 class="intro__column__right__title">
+                  agro <span>awesome products</span>
+                </h3>
+              </div>
+              <div class="intro__bottom__list__item">
+                <div class="intro__column__bottom__img">
+                  <img
+                    class="intro__column__img"
+                    src="img/intro/4.jpg"
+                    alt="fruits"
+                  />
+                  <h3 class="intro__column__title">
+                    juicy <span>fruits</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--INTRO-->
+
+    <!--SERVICES-->
+    <div class="services" id="services">
+      <div class="container">
+        <div class="services__top">
+          <div class="services__top__picture">
+            <img
+              class="services__top__img"
+              src="img/services/img_1.jpg"
+              alt="Quality food"
+            />
+            <div class="services__top__gradient">
+              <img
+                class="services__top__img"
+                src="img/services/img_2.jpg"
+                alt="Quality food"
+              />
+              <h3 class="services__top__title" data-aos="fade-up-left">
+                Quality
+                <span
+                  >food<br />
+                  is the</span
+                >
+                <span>most important</span><span> thing in our</span>
+                <span>life</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="services__bottom">
+          <div class="section__header">
+            <h2 class="section__title">agro food <span>services</span></h2>
+            <div class="section__subtitle">
+              <p>
+                Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.
+              </p>
+            </div>
+          </div>
+          <div class="services__bottom__row">
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon1.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">Steak House</h3>
+            </div>
+
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon2.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">Tasty Cereals</h3>
+            </div>
+
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon3.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">Italian pizza</h3>
+            </div>
+
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon4.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">
+                Vegeterian Burgers
+              </h3>
+            </div>
+
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon5.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">Awesome Cupcake</h3>
+            </div>
+
+            <div class="services__bottom__column">
+              <img
+                class="services__bottom__icon"
+                src="img/services/icon6.svg"
+                alt="icon services"
+              />
+              <h3 class="services__bottom__column__title">Vegetables</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---SERVICES-->
+
+    <!--ABOUT-->
+    <div class="about" id="about">
+      <div class="about__body__bg">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__intro">
+              <h2 class="about__title">
+                agro perfect<br />
+                <span>food for you</span>
+              </h2>
+              <div class="about__text">
+                <p>
+                  Latin words, combined with a handful of model sentence
+                  structures, to generate Lorem Ipsum which looks reasonable.
+                  The generated Lorem Ipsum is therefore always free from
+                  repetition injected humour, or non-characteristic words etc.
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old.
+                </p>
+              </div>
+              <a class="about__btn" href="#">discover</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="about__row" data-aos="flip-up" data-aos-duration="1000">
+          <div class="about__column__wrapper">
+            <div class="about__column">
+              <img class="about__column__img" src="img/about/img1.jpg" alt="" />
+            </div>
+            <div class="about__column__info">
+              <h3 class="about__column__title">
+                Health Benefits of a Raw Food
+              </h3>
+              <div class="about__column__text">
+                <p>
+                  Dogfish shark, bango hog sucker, baikal oilfish, eeltail
+                  catfish regal whiptail catfish; squarehead catfish electric
+                  ray.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__column__wrapper">
+            <div class="about__column">
+              <img class="about__column__img" src="img/about/img2.jpg" alt="" />
+            </div>
+            <div class="about__column__info">
+              <h3 class="about__column__title">Tips for Ripening your fruit</h3>
+              <div class="about__column__text">
+                <p>
+                  The generated Lorem Ipsum is therefore always free from
+                  repetition injected humour, or non-characteristic words etc.
+                  Susp endisse ultricies nisi vel quam suscipit
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__column__wrapper">
+            <div class="about__column__info">
+              <h3 class="about__column__title">
+                Superfoods you should be eating
+              </h3>
+              <div class="about__column__text">
+                <p>
+                  The generated Lorem Ipsum is therefore always free from
+                  repetition injected humour, or non-characteristic words etc.
+                  Susp endisse ultricies nisi vel quam suscipit
+                </p>
+              </div>
+            </div>
+            <div class="about__column">
+              <img class="about__column__img" src="img/about/img3.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="about__column__wrapper">
+            <div class="about__column__info">
+              <h3 class="about__column__title">
+                Grunt torrent catfish squaretail Norwegian Atlantic salmon
+              </h3>
+              <div class="about__column__text">
+                <p>
+                  Northern clingfish searobin betta blue shark. Jackfish leopard
+                  danio suckermouth armored catfish, eelpout velvetfish
+                  goldspotted killifish--driftfish ronquil emperor golden loac
+                </p>
+              </div>
+            </div>
+            <div class="about__column">
+              <img class="about__column__img" src="img/about/img4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--ABOUT-->
+
+    <div class="cakes">
+      <div class="container">
+        <div class="cakes__inner">
+          <h2 class="cakes__title">Tasty Cakes</h2>
+          <img class="cakes__icon" src="img/cakes/icon.svg" alt="cakes icon" />
+        </div>
+      </div>
+    </div>
+
+    <!--PROGRESS-->
+    <div class="progress">
+      <div class="container">
+        <div class="progress__inner">
+          <div class="section__header">
+            <h2 class="section__title">agro <span>progress</span></h2>
+            <div class="section__subtitle">
+              <p>
+                Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.
+                Ipsum is therefore always free from repetition injected humour,
+                or non-characteristic words etc
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="progress__row"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+          >
+            <div class="progress__column">
+              <div class="progress__column__picture">
+                <img
+                  class="progress__column__icon"
+                  src="img/progress/icon1.svg"
+                  alt="icon cakes"
+                />
+              </div>
+              <div class="progress__column__info">
+                <h4 class="progress__column__number">350</h4>
+                <h3 class="progress__column__title">Muffins</h3>
+              </div>
+            </div>
+
+            <div class="progress__column">
+              <div class="progress__column__picture">
+                <img
+                  class="progress__column__icon"
+                  src="img/progress/icon2.svg"
+                  alt="icon cakes"
+                />
+              </div>
+              <div class="progress__column__info">
+                <h4 class="progress__column__number">158</h4>
+                <h3 class="progress__column__title">Cakes</h3>
+              </div>
+            </div>
+
+            <div class="progress__column">
+              <div class="progress__column__picture">
+                <img
+                  class="progress__column__icon"
+                  src="img/progress/icon3.svg"
+                  alt="icon cakes"
+                />
+              </div>
+              <div class="progress__column__info">
+                <h4 class="progress__column__number">500</h4>
+                <h3 class="progress__column__title">Cupcakes</h3>
+              </div>
+            </div>
+
+            <div class="progress__column">
+              <div class="progress__column__picture">
+                <img
+                  class="progress__column__icon"
+                  src="img/progress/icon4.svg"
+                  alt="icon cakes"
+                />
+              </div>
+              <div class="progress__column__info">
+                <h4 class="progress__column__number">685</h4>
+                <h3 class="progress__column__title">Doughnut</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--PROGRESS-->
+
+    <!--GALLERY-->
+    <div class="gallery__foods" id="gallery">
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/1.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/2.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/3.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/4.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/5.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/6.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/7.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+      <div class="gallery__column">
+        <img class="gallery__img" src="img/gallery_food/8.webp" alt="food" />
+        <h3 class="gallery__column__title">Testy Jam</h3>
+      </div>
+    </div>
+
+    <!--REVIEWS-->
+    <div class="reviews">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">people says <span>about agro</span></h2>
+          <div class="section__subtitle">
+            <p>
+              Latin words, combined with a handful of model sentence structures,
+              to generate Lorem Ipsum which looks reasonable. Ipsum is therefore
+              always free from repetition injected humour, or non-characteristic
+              words etc
+            </p>
+          </div>
+        </div>
+
+        <div class="slider__reviews">
+          <div class="slider__reviews__item">
+            <div class="reviews__text">
+              <p>
+                <span class="gg">&ldquo;</span> Latin words, combined with a
+                handful of model sentence structures, to generate Lorem Ipsum
+                which looks reasonable. The generated Lorem Ipsum is therefore
+                always free from repetition injected humour, or
+                non-characteristic words etc. Contrary to popular belief, Lorem
+                Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years
+                old. Richard McClintock, a Latin professor at Hampden-Sydney
+                College in Virginia, looked up one of the more obscure Latin
+                words, consectetur, from a Lorem Ipsum passage, and going
+                through the cites of the word in classical literature,
+                discovered
+              </p>
+            </div>
+
+            <div class="reviews__user">
+              <div class="reviews__user__picture">
+                <img
+                  class="reviews__user__img"
+                  src="img/reviews/222.webp"
+                  alt="user"
+                />
+              </div>
+              <div class="reviews__user__info">
+                <h4 class="user__name__pos">
+                  Terens Smith<span>/SEO AntalAgro</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__reviews__item">
+            <div class="reviews__text">
+              <p>
+                <span class="gg">&ldquo;</span> Latin words, combined with a
+                handful of model sentence structures, to generate Lorem Ipsum
+                which looks reasonable. The generated Lorem Ipsum is therefore
+                always free from repetition injected humour, or
+                non-characteristic words etc. Contrary to popular belief, Lorem
+                Ipsum is not simply random text.
+              </p>
+            </div>
+
+            <div class="reviews__user">
+              <div class="reviews__user__picture">
+                <img
+                  class="reviews__user__img"
+                  src="img/reviews/user2.webp"
+                  alt="user"
+                />
+              </div>
+              <div class="reviews__user__info">
+                <h4 class="user__name__pos">
+                  Adam Brain<span>/SEO AntalAgro</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__reviews__item">
+            <div class="reviews__text">
+              <p>
+                <span class="gg">&ldquo;</span> Latin words, combined with a
+                handful of model sentence structures, to generate Lorem Ipsum
+                which looks reasonable. The generated Lorem Ipsum is therefore
+                always free from repetition injected humour, or
+                non-characteristic words etc. Contrary to popular belief, Lorem
+                Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years
+                old.
+              </p>
+            </div>
+
+            <div class="reviews__user">
+              <div class="reviews__user__picture">
+                <img
+                  class="reviews__user__img"
+                  src="img/reviews/user3.webp"
+                  alt="user"
+                />
+              </div>
+              <div class="reviews__user__info">
+                <h4 class="user__name__pos">
+                  Winston Churchill<span>/SEO AntalAgro</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__reviews__item">
+            <div class="reviews__text">
+              <p>
+                <span class="gg">&ldquo;</span> Latin words, combined with a
+                handful of model sentence structures, to generate Lorem Ipsum
+                which looks reasonable.
+              </p>
+            </div>
+
+            <div class="reviews__user">
+              <div class="reviews__user__picture">
+                <img
+                  class="reviews__user__img"
+                  src="img/reviews/user4.webp"
+                  alt="user"
+                />
+              </div>
+              <div class="reviews__user__info">
+                <h4 class="user__name__pos">
+                  Jonathon Swift<span>/SEO AntalAgro</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__reviews__item">
+            <div class="reviews__text">
+              <p>
+                <span class="gg">&ldquo;</span> Latin words, combined with a
+                handful of model sentence structures, to generate Lorem Ipsum
+                which looks reasonable.
+              </p>
+            </div>
+
+            <div class="reviews__user">
+              <div class="reviews__user__picture">
+                <img
+                  class="reviews__user__img"
+                  src="img/reviews/user5.webp"
+                  alt="user"
+                />
+              </div>
+              <div class="reviews__user__info">
+                <h4 class="user__name__pos">
+                  Margaret Thatcher<span>/SEO AntalAgro</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--REVIEWS-->
+
+    <!--BLOG-->
+    <div class="blog" id="blog">
+      <div class="container">
+        <div class="blog__inner">
+          <div class="section__header">
+            <h2 class="section__title">blog <span>posts</span></h2>
+            <div class="section__subtitle">
+              <p>
+                Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.
+              </p>
+            </div>
+          </div>
+
+          <div class="blog__row">
+            <div class="blog__column">
+              <img
+                class="blog__column__img"
+                src="img/blog/blog1.webp"
+                alt="blog img"
+              />
+              <div class="blog__date">
+                <div class="blog__date__number">07</div>
+                <div class="blog__date__month">Nov</div>
+              </div>
+              <div class="blog__column__name">
+                <h4 class="blog__column__suptitle">
+                  organic food/tips &amp; guides
+                </h4>
+                <h3 class="blog__column__title">
+                  Tips for Ripening your Fruit
+                </h3>
+              </div>
+            </div>
+
+            <div class="blog__column">
+              <img
+                class="blog__column__img"
+                src="img/blog/blog2.webp"
+                alt="blog img"
+              />
+              <div class="blog__date">
+                <div class="blog__date__number">03</div>
+                <div class="blog__date__month">Nov</div>
+              </div>
+              <div class="blog__column__name">
+                <h4 class="blog__column__suptitle">diet/organic food</h4>
+                <h3 class="blog__column__title">
+                  Health Benefits of a Raw Food
+                </h3>
+              </div>
+            </div>
+
+            <div class="blog__column">
+              <img
+                class="blog__column__img"
+                src="img/blog/blog3.webp"
+                alt="blog img"
+              />
+              <div class="blog__date">
+                <div class="blog__date__number">25</div>
+                <div class="blog__date__month">Oct</div>
+              </div>
+              <div class="blog__column__name">
+                <h4 class="blog__column__suptitle">diet/organic food</h4>
+                <h3 class="blog__column__title">
+                  Superfoods you should be eating
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__list">
+            <div class="blog__list__item">
+              <img class="blog__list__img" src="img/blog/categ1.webp" alt="" />
+            </div>
+            <div class="blog__list__item">
+              <img class="blog__list__img" src="img/blog/categ2.webp" alt="" />
+            </div>
+            <div class="blog__list__item">
+              <img class="blog__list__img" src="img/blog/categ3.webp" alt="" />
+            </div>
+            <div class="blog__list__item">
+              <img class="blog__list__img" src="img/blog/categ4.webp" alt="" />
+            </div>
+            <div class="blog__list__item">
+              <img class="blog__list__img" src="img/blog/categ5.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--BLOG-->
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__body">
+            <div class="footer__logo">
+              <a class="logo__link" href="bakery/index.html">
+                <img class="logo__img" src="img/header/logo.webp" alt="logo" />
+              </a>
+              <h3 class="logo__title">agro</h3>
+            </div>
+            <div class="footer__nav__wrapper">
+              <ul class="footer__nav">
+                <li>
+                  <a class="footer__nav__link" href="#">Home</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">About</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Pages</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Gallery</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Blog</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Contacts</a>
+                </li>
+              </ul>
+
+              <ul class="footer__nav">
+                <li>
+                  <a class="footer__nav__link" href="#">Partnets</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Customer Service</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Vegetables</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Fruits</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="#">Organic Food</a>
+                </li>
+                <li>
+                  <a class="footer__nav__link" href="charger/app/index.html">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__contacts">
+            <div class="footer__contacts__column">
+              <h3 class="footer__contacts__title">email</h3>
+              <a
+                class="footer__contacts__link"
+                href="mailto:support@agrocompany.com"
+                >support@agrocompany.com</a
+              >
+            </div>
+
+            <div class="footer__contacts__column">
+              <h3 class="footer__contacts__title">phone</h3>
+              <a class="footer__contacts__link" href="./presentation/index.html"
+                >+1 (234) 56789,
+              </a>
+              <a class="footer__contacts__link" href="./new-project/index.html"
+                >+1 987 654 3210</a
+              >
+            </div>
+
+            <div class="footer__contacts__icons">
+              <svg class="footer__icons__img">
+                <use xlink:href="#twitter"></use>
+              </svg>
+              <svg class="footer__icons__img">
+                <use xlink:href="#facebook"></use>
+              </svg>
+              <svg class="footer__icons__img">
+                <use xlink:href="#linkedin"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom__left">
+              <span>&copy; 2017, AgroTheme by Artureanec</span
+              ><span>Privacy Policy</span><span>Sitemap</span>
+            </div>
+            <div class="footer__bottom__right">
+              <span>All Right Reserved.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1118.171454065365!2d37.40563127558609!3d55.908754364245695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zOCDQvNC40LrRgNC-0YDQsNC50L7QvSDQvNCw0YDQuNC4INGA0YPQsdGG0L7QstC-0Lk!5e0!3m2!1sru!2sru!4v1596914725066!5m2!1sru!2sru"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery.spincrement.min.js"></script>
+    <script src="js/scroll-animate.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/navigation_page.js"></script>
+    <script src="js/spin-numbers.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slider-reviews.js"></script>
+  </body>
+</html>
