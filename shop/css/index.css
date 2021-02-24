@@ -462,55 +462,6 @@ a {
   height: 467px;
 }
 
-.intro__picture-1 {
-  background-image: url("../img/intro/1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-2 {
-  background-image: url("../img/intro/2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-3 {
-  background-image: url("../img/intro/3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-4 {
-  background-image: url("../img/intro/4.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-5 {
-  background-image: url("../img/intro/5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-6 {
-  background-image: url("../img/intro/6.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
-.intro__picture-7 {
-  background-image: url("../img/intro/7.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-}
-
 .intro__img {
   width: 100%;
   height: 100%;
@@ -2341,6 +2292,13 @@ a {
 
   .header__inner .suitcase {
     margin-right: 0;
+  }
+
+  .intro__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 166%;
   }
 
   .feature__picture {

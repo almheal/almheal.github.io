@@ -24,6 +24,7 @@ $('.sizes__slider').slick({
   cssEase: 'linear',
   speed: 700,
   useCSS: false,
+  lazyLoad: 'ondemand',
   prevArrow: $('.sizes-button-prev'),
   nextArrow: $('.sizes-button-next'),
 })
@@ -33,7 +34,8 @@ $('.specification__slider').slick({
   dots: false,
   useCSS: false,
   speed: 800,
-  // autoplay: true,
+  autoplay: true,
+  lazyLoad: 'ondemand',
   variableWidth: true,
   prevArrow: $('.specification-button-prev'),
   nextArrow: $('.specification-button-next'),
@@ -61,6 +63,7 @@ $('.specification__slider').slick({
 $('.reviews__slider').slick({
   dots: false,
   useCSS: false,
+  lazyLoad: 'ondemand',
   prevArrow: $('.review-button-prev'),
   nextArrow: $('.review-button-next'),
   responsive: [
@@ -79,6 +82,7 @@ $('.accessories__slider').slick({
   arrows: false,
   slidesToShow: 4,
   useCSS: false,
+  lazyLoad: 'ondemand',
   responsive: [
     {
       breakpoint: 989,
