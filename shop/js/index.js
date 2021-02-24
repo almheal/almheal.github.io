@@ -106,3 +106,11 @@ $('.accessories__slider').slick({
     },
   ],
 })
+
+const button = document.querySelector('.burger__menu')
+const modal = document.querySelector('.menu__modal')
+
+button.addEventListener('click', () => {
+  modal.classList.toggle('show')
+  button.classList.toggle('active')
+})
