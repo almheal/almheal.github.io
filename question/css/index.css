@@ -260,70 +260,6 @@ body {
   height: 100%;
 }
 
-.step__item {
-  display: none;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.step__item.active {
-  display: block;
-}
-
-.anim-next {
-  -webkit-animation: animateNext 1s linear;
-          animation: animateNext 1s linear;
-}
-
-@-webkit-keyframes animateNext {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
-@keyframes animateNext {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
-@-webkit-keyframes animatePrev {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
-  }
-}
-
-@keyframes animatePrev {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
-  }
-}
-
 .progress-bar {
   position: relative;
   display: -webkit-box;
@@ -477,5 +413,21 @@ body {
 }
 
 .prev.active {
+  display: block;
+}
+
+.prev {
+  display: none;
+}
+
+.prev.active {
+  display: block;
+}
+
+.step__item {
+  display: none;
+}
+
+.step__item .active {
   display: block;
 }

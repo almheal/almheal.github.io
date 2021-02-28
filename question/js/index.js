@@ -1,14 +1,14 @@
-
-
 class Stepper {
   constructor({
+    selectorWrapper,
     stepsSelector,
     selectorProgress,
     prevButton,
     nextButton,
     numberSelector,
   }) {
-    this.steps = [...document.querySelectorAll(stepsSelector)]
+    this.$el = document.querySelector(selectorWrapper)
+    this.steps = [...this.$el.querySelectorAll(stepsSelector)]
     this.progress = document.querySelector(selectorProgress)
     this.prevButton = document.querySelector(prevButton)
     this.nextButton = document.querySelector(nextButton)
@@ -30,34 +30,52 @@ class Stepper {
 
   prevStep() {
     const activeStep = this.searchActiveStep()
-    activeStep.classList.remove('active')
-    this.addClass(activeStep.previousElementSibling, 'active')
-    if (Number(activeStep.dataset.step) === 2) {
+    const stepNumber = Number(activeStep.dataset.step)
+    const prevStepItem = this.steps[stepNumber - 2]
+    if (stepNumber === 2) {
+      this.addStyle(this.prevButton, 'display', 'none')
       this.prevButton.classList.remove('active')
     }
+
+    activeStep.classList.remove('active')
+    this.addStyle(activeStep, 'display', 'none')
+    this.addStyle(prevStepItem, 'display', 'block')
+    this.addClass(prevStepItem, 'active')
+    this.addStyle(this.prevButton, 'disable', true)
+    setTimeout(async () => {
+      await this.addStyle(prevStepItem, 'transform', 'translateY(0%)')
+    }, 0)
     this.calculateProgress('prev')
   }
 
   nextStep() {
     if (!this.prevButton.classList.contains('active')) {
       this.addClass(this.prevButton, 'active')
+      this.addStyle(this.prevButton, 'display', 'block')
     }
 
     const activeStep = this.searchActiveStep()
     const stepNumber = Number(activeStep.dataset.step)
 
     if (stepNumber === this.steps.length) return
-      activeStep.classList.remove('active')
-      this.addClass(activeStep.nextElementSibling, 'active')
-      this.calculateProgress('next')
+
+    activeStep.classList.remove('active')
+    this.addStyle(activeStep, 'transform', 'translateY(-120%)')
+
+    setTimeout(async () => {
+      await this.addStyle(activeStep, 'display', 'none')
+      await this.addStyle(this.steps[stepNumber], 'display', 'block')
+      await this.addClass(this.steps[stepNumber], 'active')
+      await this.calculateProgress('next')
+    }, 700)
   }
 
   calculateProgress(operation) {
     if (operation === 'prev') {
       const updateProgress =
-        parseInt(this.progress.style.width) - this.oneNumberStep
-      this.progress.style.width = updateProgress + '%'
-      this.number.textContent = updateProgress + '%'
+        parseInt(this.progress.style.width) - this.oneNumberStep + '%'
+      this.addStyle(this.progress, 'width', updateProgress)
+      this.number.textContent = updateProgress
       return
     }
     const activeStep = this.searchActiveStep()
@@ -68,7 +86,11 @@ class Stepper {
     }
     const width = parseInt(prevSteps * this.oneNumberStep) + '%'
     this.number.textContent = width
-    this.progress.style.width = width
+    this.addStyle(this.progress, 'width', width)
+  }
+
+  addStyle(el, property, value) {
+    el.style[property] = value
   }
 
   initListeners() {
@@ -80,11 +102,14 @@ class Stepper {
     this.initListeners()
     this.progress.style.width = this.oneNumberStep + '%'
     this.number.textContent = this.oneNumberStep + '%'
+    this.addStyle(this.$el, 'overflow', 'hidden')
+    this.addStyle(this.steps[0], 'display', 'block')
+    this.steps.forEach((step) => this.addStyle(step, 'transition', '1s'))
   }
 }
-;
 
 const stepper = new Stepper({
+  selectorWrapper: '[data-stepper]',
   stepsSelector: '[data-step]',
   selectorProgress: '[data-progress]',
   prevButton: '[data-prev]',
