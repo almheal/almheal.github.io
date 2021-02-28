@@ -87,6 +87,8 @@ h6 {
 }
 
 .header {
+  position: relative;
+  z-index: 500;
   margin: 17px 17px 0;
   padding: 0 60px;
   border-radius: 9px;
@@ -398,6 +400,7 @@ body {
 }
 
 .buttons {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,26 +411,14 @@ body {
 }
 
 .prev {
-  display: none;
   margin-right: 20px;
 }
 
-.prev.active {
-  display: block;
-}
-
-.prev {
-  display: none;
-}
-
-.prev.active {
-  display: block;
-}
-
-.step__item {
-  display: none;
-}
-
-.step__item .active {
-  display: block;
+.section-background {
+  position: absolute;
+  left: 0;
+  top: -111px;
+  right: 0;
+  width: 100%;
+  height: calc(100% + 111px);
 }

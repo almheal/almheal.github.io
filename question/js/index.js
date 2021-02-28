@@ -6,6 +6,7 @@ class Stepper {
     prevButton,
     nextButton,
     numberSelector,
+    background,
   }) {
     this.$el = document.querySelector(selectorWrapper)
     this.steps = [...this.$el.querySelectorAll(stepsSelector)]
@@ -15,6 +16,7 @@ class Stepper {
     this.number = document.querySelector(numberSelector)
     this.lengthSteps = this.steps.length
     this.oneNumberStep = parseInt(100 / this.steps.length)
+    this.background = document.querySelector(background)
   }
 
   searchActiveStep() {
@@ -26,6 +28,14 @@ class Stepper {
 
   addClass(el, className) {
     el.classList.add(className)
+  }
+
+  async changeImg(url) {
+    this.addStyle(this.background, 'opacity', '0')
+    setTimeout(() => {
+      this.background.setAttribute('src', url)
+      this.addStyle(this.background, 'opacity', '1')
+    }, 500)
   }
 
   prevStep() {
@@ -40,6 +50,7 @@ class Stepper {
     }
 
     activeStep.classList.remove('active')
+    this.changeImg(prevStepItem.dataset.stepImg)
 
     this.addStyle(activeStep, 'display', 'none')
     this.addStyle(prevStepItem, 'display', 'block')
@@ -67,6 +78,7 @@ class Stepper {
 
     activeStep.classList.remove('active')
     this.addStyle(activeStep, 'transform', 'translateY(-120%)')
+    this.changeImg(this.steps[stepNumber].dataset.stepImg)
 
     setTimeout(() => {
       this.addStyle(activeStep, 'display', 'none')
@@ -109,8 +121,13 @@ class Stepper {
     this.progress.style.width = this.oneNumberStep + '%'
     this.number.textContent = this.oneNumberStep + '%'
     this.addStyle(this.$el, 'overflow', 'hidden')
+    this.steps.forEach((step) => {
+      this.addStyle(step, 'transition', '1s')
+      this.addStyle(step, 'display', 'none')
+    })
     this.addStyle(this.steps[0], 'display', 'block')
-    this.steps.forEach((step) => this.addStyle(step, 'transition', '1s'))
+    this.background.setAttribute('src', this.steps[0].dataset.stepImg)
+    this.addStyle(this.background, 'transition', '0.5s')
   }
 }
 
@@ -121,6 +138,7 @@ const stepper = new Stepper({
   prevButton: '[data-prev]',
   nextButton: '[data-next]',
   numberSelector: '[data-number]',
+  background: '[data-background]',
 })
 
 stepper.init()
