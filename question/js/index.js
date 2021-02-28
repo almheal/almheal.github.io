@@ -59,7 +59,7 @@ class Stepper {
     setTimeout(() => {
       this.addStyle(prevStepItem, 'transform', 'translateY(0%)')
       this.calculateProgress('prev')
-    }, 0)
+    }, 10)
   }
 
   nextStep() {
