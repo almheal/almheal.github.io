@@ -17,56 +17,55 @@
   </head>
   <body>
     <svg display="none">
-      <symbol id="arrow-right" viewBox="0 0 256 256">
-        <polygon
-          points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128 		"
-        />
-      </symbol>
-      <symbol id="arrow-left" viewBox="0 0 256 256">
-        <polygon
-          points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128 		"
-        />
-      </symbol>
-    </svg>
+  <symbol id="arrow-right" viewBox="0 0 256 256">
+    <polygon
+      points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128 		"
+    />
+  </symbol>
+  <symbol id="arrow-left" viewBox="0 0 256 256">
+    <polygon
+      points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128 		"
+    />
+  </symbol>
+</svg>
 
     <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header-left">
-            <a class="logo-link" href="#">
-              <img class="logo" src="./img/logo.svg" alt="logo" />
-            </a>
-            <nav class="menu" data-menu>
-              <button class="button__cross" data-close-menu></button>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu-link" href="#" data-scroll="intro">Главная</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu-link" href="#" data-scroll="composition"
-                    >Состав продукта</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu-link" href="#" data-scroll="reviews">Отзывы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu-link" href="#" data-scroll="promo"
-                    >О продукте</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header-right">
-            <button class="button-primary" btn-scroll="form">Заказать</button>
-            <button class="menu__button" data-button-menu>
-              <span class="menu__line"></span>
-            </button>
-          </div>
-        </div>
+  <div class="container">
+    <div class="header__inner">
+      <div class="header-left">
+        <a class="logo-link" href="#">
+          <img class="logo" src="./img/logo.svg" alt="logo" />
+        </a>
+        <nav class="menu" data-menu>
+          <button class="button__cross" data-close-menu></button>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu-link" href="#" data-scroll="intro">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-link" href="#" data-scroll="composition"
+                >Состав продукта</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="menu-link" href="#" data-scroll="reviews">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu-link" href="#" data-scroll="promo">О продукте</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
+      <div class="header-right">
+        <a class="button-primary" href="#" btn-scroll="form">Заказать</a>
+        <button class="menu__button" data-button-menu>
+          <span class="menu__line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
 
     <main class="main">
       <section class="intro" data-section="intro" data-anim-item>
@@ -77,7 +76,7 @@
         </div>
         <div class="container">
           <div class="intro__inner">
-            <h1 class="intro__title">Путь к здоровой потенции</h1>
+            <h1 class="intro__title">Путь к здоровой жизни</h1>
             <div class="intro__body">
               <div class="intro__column">
                 <div class="intro__product">
@@ -115,9 +114,9 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   </li>
                 </ul>
-                <button class="button-primary" btn-scroll="form">
+                <a class="button-primary" href="#" btn-scroll="form">
                   Заказать
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -190,9 +189,9 @@
                     alt="product"
                   />
                 </div>
-                <button class="button-primary" btn-scroll="form">
+                <a class="button-primary" href="#" btn-scroll="form">
                   Заказать
-                </button>
+                </a>
               </div>
               <div class="ingredients__list">
                 <div class="ingredients__item">
@@ -346,7 +345,7 @@
             <h3 class="section__title">О продукте</h3>
             <div class="promo__body">
               <div class="promo__column">
-                <img class="promo-img" src="./img/doctor-product.png" alt="doctor" />
+                <img class="promo-img" src="./img/doctor.png" alt="doctor" />
               </div>
               <div class="promo__column">
                 <div class="promo__text">
@@ -361,9 +360,9 @@
                     Id nostrum at tenetur nulla.
                   </p>
                 </div>
-                <button class="button-primary" btn-scroll="form">
+                <a class="button-primary" href="#" btn-scroll="form">
                   Заказать
-                </button>
+                </a>
               </div>
             </div>
             <ul class="promo__list">
@@ -441,7 +440,7 @@
                   />
                   <span class="tooltip">89149112061</span>
                 </fieldset>
-                <button class="button-primary" type="submit">Заказать</button>
+                <button class="button-primary">Заказать</button>
               </form>
             </div>
           </div>

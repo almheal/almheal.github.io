@@ -4,13 +4,12 @@ $('[data-reviews]').slick({
   autoplay: true,
 })
 ;
-
-
 const orderButtons = document.querySelectorAll('[btn-scroll="form"]')
 const menu = document.querySelector('[data-menu]')
 
 orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault()
     scrollToBlock('[data-order]')
   })
 })

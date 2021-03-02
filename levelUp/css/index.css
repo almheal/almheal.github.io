@@ -119,9 +119,9 @@ h6 {
 
 .menu {
   margin-left: 50px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu .button-primary {
@@ -227,6 +227,7 @@ h6 {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
+  text-align: center;
   width: 140px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -769,7 +770,7 @@ body {
 }
 
 .order {
-  background-image: url("../img/backgrounds/bg-pink.png");
+  background-image: url("../img/backgrounds/bg-pink.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
