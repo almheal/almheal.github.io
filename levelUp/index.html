@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <title>levelUp</title>
+  </head>
+  <body>
+    <svg display="none">
+      <symbol id="arrow-right" viewBox="0 0 256 256">
+        <polygon
+          points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128 		"
+        />
+      </symbol>
+      <symbol id="arrow-left" viewBox="0 0 256 256">
+        <polygon
+          points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128 		"
+        />
+      </symbol>
+    </svg>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header-left">
+            <a class="logo-link" href="#">
+              <img class="logo" src="./img/logo.svg" alt="logo" />
+            </a>
+            <nav class="menu" data-menu>
+              <button class="button__cross" data-close-menu></button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu-link" href="#" data-scroll="intro">Главная</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu-link" href="#" data-scroll="composition"
+                    >Состав продукта</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a class="menu-link" href="#" data-scroll="reviews">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu-link" href="#" data-scroll="promo"
+                    >О продукте</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right">
+            <button class="button-primary" btn-scroll="form">Заказать</button>
+            <button class="menu__button" data-button-menu>
+              <span class="menu__line"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="intro" data-section="intro" data-anim-item>
+        <div class="background-wrapper">
+          <video class="intro__video" muted loop autoplay>
+            <source src="./img/backgrounds/background.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="container">
+          <div class="intro__inner">
+            <h1 class="intro__title">Путь к здоровой потенции</h1>
+            <div class="intro__body">
+              <div class="intro__column">
+                <div class="intro__product">
+                  <img
+                    class="product-img"
+                    src="./img/product.png"
+                    alt="product"
+                  />
+                </div>
+              </div>
+              <div class="intro__column">
+                <ul class="product__list">
+                  <li class="product__info">
+                    <span class="decor__circle">
+                      <svg class="arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li class="product__info">
+                    <span class="decor__circle">
+                      <svg class="arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li class="product__info">
+                    <span class="decor__circle">
+                      <svg class="arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                </ul>
+                <button class="button-primary" btn-scroll="form">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="composition" data-section="composition" data-anim-item>
+        <div class="container">
+          <div class="composition__inner">
+            <h3 class="section__title">Состав продукта</h3>
+            <div class="composition__body">
+              <div class="ingredients__list">
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="composition__product">
+                <div class="composition__product-wrapper">
+                  <img
+                    class="product-img"
+                    src="./img/product.png"
+                    alt="product"
+                  />
+                </div>
+                <button class="button-primary" btn-scroll="form">
+                  Заказать
+                </button>
+              </div>
+              <div class="ingredients__list">
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+                <div class="ingredients__item">
+                  <div class="ingredient__icon">
+                    <img
+                      class="ingredient__icon-img"
+                      src="./img/composition/capsule.jpg"
+                      alt="ingredient"
+                    />
+                  </div>
+                  <div class="ingredient__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam totam assumenda facere officiis vel dolorem!
+                      Placeat sequi non dolorum temporibus sapiente suscipit,
+                      officia atque laborum quo, error ipsum ab hic.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" data-section="reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <h3 class="section__title">Отзывы</h3>
+            <div class="reviews__slider-wrapper">
+              <button
+                class="slider__button slider__button-right"
+                data-reviews-next
+              >
+                <svg class="arrow">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </button>
+              <button
+                class="slider__button slider__button-left"
+                data-reviews-prev
+              >
+                <svg class="arrow">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </button>
+              <div class="reviews__slider" data-reviews>
+                <div class="reviews__item">
+                  <div class="reviews__content">
+                    <div class="reviews__img-wrapper">
+                      <img
+                        class="reviews__img"
+                        src="./img/reviews/reviews-user.jpg"
+                        alt="reviews-img"
+                      />
+                    </div>
+                    <div class="user__name">Алексей Иванов</div>
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Fuga animi dolorum enim dolore voluptatum omnis
+                        obcaecati fugit ab dolor. Est sunt soluta quo, dolore
+                        quod eius dicta cumque velit voluptatem!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <div class="reviews__content">
+                    <div class="reviews__img-wrapper">
+                      <img
+                        class="reviews__img"
+                        src="./img/reviews/reviews-user.jpg"
+                        alt="reviews-img"
+                      />
+                    </div>
+                    <div class="user__name">Алексей Иванов</div>
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Fuga animi dolorum enim dolore voluptatum omnis
+                        obcaecati fugit ab dolor. Est sunt soluta quo, dolore
+                        quod eius dicta cumque velit voluptatem!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <div class="reviews__content">
+                    <div class="reviews__img-wrapper">
+                      <img
+                        class="reviews__img"
+                        src="./img/reviews/reviews-user.jpg"
+                        alt="reviews-img"
+                      />
+                    </div>
+                    <div class="user__name">Алексей Иванов</div>
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Fuga animi dolorum enim dolore voluptatum omnis
+                        obcaecati fugit ab dolor. Est sunt soluta quo, dolore
+                        quod eius dicta cumque velit voluptatem!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo" data-section="promo" data-anim-item>
+        <div class="container">
+          <div class="promo__inner">
+            <h3 class="section__title">О продукте</h3>
+            <div class="promo__body">
+              <div class="promo__column">
+                <img class="promo-img" src="./img/doctor-product.png" alt="doctor" />
+              </div>
+              <div class="promo__column">
+                <div class="promo__text">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Adipisci culpa sed id molestias perspiciatis aliquam quidem
+                    ratione tenetur. Quia totam, omnis tempore praesentium eos
+                    accusamus iusto molestias animi nostrum voluptates. Earum
+                    voluptatum aliquam molestias consequuntur dicta, nihil
+                    blanditiis est veniam ducimus enim qui itaque eius. Dolore
+                    sunt nesciunt dolor repellendus ad neque, qui atque facilis.
+                    Id nostrum at tenetur nulla.
+                  </p>
+                </div>
+                <button class="button-primary" btn-scroll="form">
+                  Заказать
+                </button>
+              </div>
+            </div>
+            <ul class="promo__list">
+              <li class="promo__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                eaque eligendi exercitationem ad, aperiam nobis eius eum omnis,
+                distinctio eos quo quibusdam optio, quis cum quos non sapiente!
+                Doloremque, ut?
+              </li>
+              <li class="promo__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                eaque eligendi exercitationem ad, aperiam nobis eius eum omnis,
+                distinctio eos quo quibusdam optio, quis cum quos non sapiente!
+                Doloremque, ut?
+              </li>
+              <li class="promo__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                eaque eligendi exercitationem ad, aperiam nobis eius eum omnis,
+                distinctio eos quo quibusdam optio, quis cum quos non sapiente!
+                Doloremque, ut?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="order" data-order data-anim-item>
+        <div class="container">
+          <div class="order__inner">
+            <h4 class="order__title">LevelUp продукт для повышения потенции</h4>
+            <div class="order__time" data-time>
+              <div class="time__item" data-days></div>
+              <div class="time__item" data-hours></div>
+              <div class="time__item" data-minutes></div>
+              <div class="time__item" data-seconds></div>
+            </div>
+            <div class="order__row">
+              <div class="order__column">
+                <div class="order-product">
+                  <img
+                    class="product-img"
+                    src="./img/product.png"
+                    alt="product"
+                  />
+                </div>
+                <div class="new__price">
+                  <span class="price__item">2</span>
+                  <span class="price__item">0</span
+                  ><span class="price__item">0</span
+                  ><span class="price__item">0</span> руб
+                </div>
+                <div class="old__price">4000 руб</div>
+              </div>
+              <form class="order__form">
+                <fieldset class="form-group">
+                  <label class="input__name" for="input-name">Имя</label>
+                  <input
+                    class="input"
+                    id="input-name"
+                    type="text"
+                    placeholder="Введите ваше имя"
+                  />
+                  <span class="tooltip">Дмитрий</span>
+                </fieldset>
+                <fieldset class="form-group">
+                  <label class="input__name" for="input-number"
+                    >Номер телефона</label
+                  >
+                  <input
+                    class="input"
+                    id="input-number"
+                    type="number"
+                    placeholder="Введите номер телефона"
+                    data-number
+                  />
+                  <span class="tooltip">89149112061</span>
+                </fieldset>
+                <button class="button-primary" type="submit">Заказать</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
