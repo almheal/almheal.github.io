@@ -4,7 +4,7 @@ $('[data-reviews]').slick({
   autoplay: true,
 })
 ;
-const orderButtons = document.querySelectorAll('[btn-scroll="form"]')
+const orderButtons = document.querySelectorAll('[data-btn-scroll="form"]')
 const menu = document.querySelector('[data-menu]')
 
 orderButtons.forEach((button) => {
